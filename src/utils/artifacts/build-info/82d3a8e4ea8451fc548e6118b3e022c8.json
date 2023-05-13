@@ -1,0 +1,398 @@
+{
+	"id": "82d3a8e4ea8451fc548e6118b3e022c8",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.17",
+	"solcLongVersion": "0.8.17+commit.8df45f5f",
+	"input": {
+		"language": "Solidity",
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": [
+				"ds-test/=lib/forge-std/lib/ds-test/src/",
+				"forge-std/=lib/forge-std/src/",
+				"@filecoin/=lib/filecoin-solidity/",
+				"@solidity-cborutils/=lib/solidity-cborutils/",
+				"@solidity-bignumber/=lib/solidity-bignumber/"
+			]
+		},
+		"sources": {
+			"src/utils/Constants.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.17;\n\nuint64 constant AUTHENTICATE_MESSAGE_METHOD_NUM = 2643134072;\nuint64 constant DATACAP_RECEIVER_HOOK_METHOD_NUM = 3726118371;\nuint64 constant MARKET_NOTIFY_DEAL_METHOD_NUM = 4186741094;\naddress constant MARKET_ACTOR_ETH_ADDRESS = address(\n    0xff00000000000000000000000000000000000005\n);\naddress constant DATACAP_ACTOR_ETH_ADDRESS = address(\n    0xfF00000000000000000000000000000000000007\n);"
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"src/utils/Constants.sol": {
+				"ast": {
+					"absolutePath": "src/utils/Constants.sol",
+					"exportedSymbols": {
+						"AUTHENTICATE_MESSAGE_METHOD_NUM": [
+							4
+						],
+						"DATACAP_ACTOR_ETH_ADDRESS": [
+							22
+						],
+						"DATACAP_RECEIVER_HOOK_METHOD_NUM": [
+							7
+						],
+						"MARKET_ACTOR_ETH_ADDRESS": [
+							16
+						],
+						"MARKET_NOTIFY_DEAL_METHOD_NUM": [
+							10
+						]
+					},
+					"id": 23,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".17"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:24:0"
+						},
+						{
+							"constant": true,
+							"id": 4,
+							"mutability": "constant",
+							"name": "AUTHENTICATE_MESSAGE_METHOD_NUM",
+							"nameLocation": "74:31:0",
+							"nodeType": "VariableDeclaration",
+							"scope": 23,
+							"src": "58:60:0",
+							"stateVariable": false,
+							"storageLocation": "default",
+							"typeDescriptions": {
+								"typeIdentifier": "t_uint64",
+								"typeString": "uint64"
+							},
+							"typeName": {
+								"id": 2,
+								"name": "uint64",
+								"nodeType": "ElementaryTypeName",
+								"src": "58:6:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_uint64",
+									"typeString": "uint64"
+								}
+							},
+							"value": {
+								"hexValue": "32363433313334303732",
+								"id": 3,
+								"isConstant": false,
+								"isLValue": false,
+								"isPure": true,
+								"kind": "number",
+								"lValueRequested": false,
+								"nodeType": "Literal",
+								"src": "108:10:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_rational_2643134072_by_1",
+									"typeString": "int_const 2643134072"
+								},
+								"value": "2643134072"
+							},
+							"visibility": "internal"
+						},
+						{
+							"constant": true,
+							"id": 7,
+							"mutability": "constant",
+							"name": "DATACAP_RECEIVER_HOOK_METHOD_NUM",
+							"nameLocation": "136:32:0",
+							"nodeType": "VariableDeclaration",
+							"scope": 23,
+							"src": "120:61:0",
+							"stateVariable": false,
+							"storageLocation": "default",
+							"typeDescriptions": {
+								"typeIdentifier": "t_uint64",
+								"typeString": "uint64"
+							},
+							"typeName": {
+								"id": 5,
+								"name": "uint64",
+								"nodeType": "ElementaryTypeName",
+								"src": "120:6:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_uint64",
+									"typeString": "uint64"
+								}
+							},
+							"value": {
+								"hexValue": "33373236313138333731",
+								"id": 6,
+								"isConstant": false,
+								"isLValue": false,
+								"isPure": true,
+								"kind": "number",
+								"lValueRequested": false,
+								"nodeType": "Literal",
+								"src": "171:10:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_rational_3726118371_by_1",
+									"typeString": "int_const 3726118371"
+								},
+								"value": "3726118371"
+							},
+							"visibility": "internal"
+						},
+						{
+							"constant": true,
+							"id": 10,
+							"mutability": "constant",
+							"name": "MARKET_NOTIFY_DEAL_METHOD_NUM",
+							"nameLocation": "199:29:0",
+							"nodeType": "VariableDeclaration",
+							"scope": 23,
+							"src": "183:58:0",
+							"stateVariable": false,
+							"storageLocation": "default",
+							"typeDescriptions": {
+								"typeIdentifier": "t_uint64",
+								"typeString": "uint64"
+							},
+							"typeName": {
+								"id": 8,
+								"name": "uint64",
+								"nodeType": "ElementaryTypeName",
+								"src": "183:6:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_uint64",
+									"typeString": "uint64"
+								}
+							},
+							"value": {
+								"hexValue": "34313836373431303934",
+								"id": 9,
+								"isConstant": false,
+								"isLValue": false,
+								"isPure": true,
+								"kind": "number",
+								"lValueRequested": false,
+								"nodeType": "Literal",
+								"src": "231:10:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_rational_4186741094_by_1",
+									"typeString": "int_const 4186741094"
+								},
+								"value": "4186741094"
+							},
+							"visibility": "internal"
+						},
+						{
+							"constant": true,
+							"id": 16,
+							"mutability": "constant",
+							"name": "MARKET_ACTOR_ETH_ADDRESS",
+							"nameLocation": "260:24:0",
+							"nodeType": "VariableDeclaration",
+							"scope": 23,
+							"src": "243:101:0",
+							"stateVariable": false,
+							"storageLocation": "default",
+							"typeDescriptions": {
+								"typeIdentifier": "t_address",
+								"typeString": "address"
+							},
+							"typeName": {
+								"id": 11,
+								"name": "address",
+								"nodeType": "ElementaryTypeName",
+								"src": "243:7:0",
+								"stateMutability": "nonpayable",
+								"typeDescriptions": {
+									"typeIdentifier": "t_address",
+									"typeString": "address"
+								}
+							},
+							"value": {
+								"arguments": [
+									{
+										"hexValue": "307866663030303030303030303030303030303030303030303030303030303030303030303030303035",
+										"id": 14,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "number",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "300:42:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										},
+										"value": "0xff00000000000000000000000000000000000005"
+									}
+								],
+								"expression": {
+									"argumentTypes": [
+										{
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									],
+									"id": 13,
+									"isConstant": false,
+									"isLValue": false,
+									"isPure": true,
+									"lValueRequested": false,
+									"nodeType": "ElementaryTypeNameExpression",
+									"src": "287:7:0",
+									"typeDescriptions": {
+										"typeIdentifier": "t_type$_t_address_$",
+										"typeString": "type(address)"
+									},
+									"typeName": {
+										"id": 12,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "287:7:0",
+										"typeDescriptions": {}
+									}
+								},
+								"id": 15,
+								"isConstant": false,
+								"isLValue": false,
+								"isPure": true,
+								"kind": "typeConversion",
+								"lValueRequested": false,
+								"nameLocations": [],
+								"names": [],
+								"nodeType": "FunctionCall",
+								"src": "287:57:0",
+								"tryCall": false,
+								"typeDescriptions": {
+									"typeIdentifier": "t_address",
+									"typeString": "address"
+								}
+							},
+							"visibility": "internal"
+						},
+						{
+							"constant": true,
+							"id": 22,
+							"mutability": "constant",
+							"name": "DATACAP_ACTOR_ETH_ADDRESS",
+							"nameLocation": "363:25:0",
+							"nodeType": "VariableDeclaration",
+							"scope": 23,
+							"src": "346:102:0",
+							"stateVariable": false,
+							"storageLocation": "default",
+							"typeDescriptions": {
+								"typeIdentifier": "t_address",
+								"typeString": "address"
+							},
+							"typeName": {
+								"id": 17,
+								"name": "address",
+								"nodeType": "ElementaryTypeName",
+								"src": "346:7:0",
+								"stateMutability": "nonpayable",
+								"typeDescriptions": {
+									"typeIdentifier": "t_address",
+									"typeString": "address"
+								}
+							},
+							"value": {
+								"arguments": [
+									{
+										"hexValue": "307866463030303030303030303030303030303030303030303030303030303030303030303030303037",
+										"id": 20,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "number",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "404:42:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										},
+										"value": "0xfF00000000000000000000000000000000000007"
+									}
+								],
+								"expression": {
+									"argumentTypes": [
+										{
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									],
+									"id": 19,
+									"isConstant": false,
+									"isLValue": false,
+									"isPure": true,
+									"lValueRequested": false,
+									"nodeType": "ElementaryTypeNameExpression",
+									"src": "391:7:0",
+									"typeDescriptions": {
+										"typeIdentifier": "t_type$_t_address_$",
+										"typeString": "type(address)"
+									},
+									"typeName": {
+										"id": 18,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "391:7:0",
+										"typeDescriptions": {}
+									}
+								},
+								"id": 21,
+								"isConstant": false,
+								"isLValue": false,
+								"isPure": true,
+								"kind": "typeConversion",
+								"lValueRequested": false,
+								"nameLocations": [],
+								"names": [],
+								"nodeType": "FunctionCall",
+								"src": "391:57:0",
+								"tryCall": false,
+								"typeDescriptions": {
+									"typeIdentifier": "t_address",
+									"typeString": "address"
+								}
+							},
+							"visibility": "internal"
+						}
+					],
+					"src": "32:417:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

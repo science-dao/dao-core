@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "encode",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Brecht Devos <brecht@loopring.org>",
+			"kind": "dev",
+			"methods": {},
+			"title": "Base64",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"encode(bytes)": {
+					"notice": "Encodes some bytes to the base64 representation"
+				}
+			},
+			"notice": "[MIT License]Provides a function for encoding some bytes in base64",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/utils/Base64.sol": "Base64"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": [
+			":@filecoin/=lib/filecoin-solidity/",
+			":@solidity-bignumber/=lib/solidity-bignumber/",
+			":@solidity-cborutils/=lib/solidity-cborutils/",
+			":ds-test/=lib/forge-std/lib/ds-test/src/",
+			":forge-std/=lib/forge-std/src/"
+		]
+	},
+	"sources": {
+		"src/utils/Base64.sol": {
+			"keccak256": "0xf115cfe7dcbbdff35f5018e70575be21c452b6b457673cf32c2f7050d32d30c4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://362b874195cfb86225123188bc5ed1fbe85308ca41882edd95c0d81500290a83",
+				"dweb:/ipfs/QmVzQu2GsQdm4LiAUfk4wskNSXdy28WxP2ytGbeqyYMTFi"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,212 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "piece_cid",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint64",
+								"name": "piece_size",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "verified_deal",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "label",
+								"type": "string"
+							},
+							{
+								"internalType": "int64",
+								"name": "start_epoch",
+								"type": "int64"
+							},
+							{
+								"internalType": "int64",
+								"name": "end_epoch",
+								"type": "int64"
+							},
+							{
+								"internalType": "uint256",
+								"name": "storage_price_per_epoch",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "provider_collateral",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "client_collateral",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "dataCid",
+								"type": "string"
+							},
+							{
+								"internalType": "uint64",
+								"name": "extra_params_version",
+								"type": "uint64"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "location_ref",
+										"type": "string"
+									},
+									{
+										"internalType": "uint64",
+										"name": "car_size",
+										"type": "uint64"
+									},
+									{
+										"internalType": "bool",
+										"name": "skip_ipni_announce",
+										"type": "bool"
+									},
+									{
+										"internalType": "bool",
+										"name": "remove_unsealed_copy",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct Structs.ExtraParamsV1",
+								"name": "extra_params",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct Structs.DealRequest",
+						"name": "deal",
+						"type": "tuple"
+					}
+				],
+				"name": "serializeDealProposal",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "location_ref",
+								"type": "string"
+							},
+							{
+								"internalType": "uint64",
+								"name": "car_size",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "skip_ipni_announce",
+								"type": "bool"
+							},
+							{
+								"internalType": "bool",
+								"name": "remove_unsealed_copy",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Structs.ExtraParamsV1",
+						"name": "params",
+						"type": "tuple"
+					}
+				],
+				"name": "serializeExtraParamsV1",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/interfaces/IUtils.sol": "IUtils"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": [
+			":@filecoin/=lib/filecoin-solidity/",
+			":@solidity-bignumber/=lib/solidity-bignumber/",
+			":@solidity-cborutils/=lib/solidity-cborutils/",
+			":ds-test/=lib/forge-std/lib/ds-test/src/",
+			":forge-std/=lib/forge-std/src/"
+		]
+	},
+	"sources": {
+		"src/interfaces/IUtils.sol": {
+			"keccak256": "0x2607994ba1074238e30c109a028a81d81772bb3edd2afb02de905c06d85a3129",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d0532ba3b77ba50593f0781a15a72166dad88e5d3951cc39062897b0e20752dc",
+				"dweb:/ipfs/QmZSdJYXV3tLoP2LAic1SxJuM4gMoFHofB66RFkKmoMDhU"
+			]
+		},
+		"src/utils/Enums.sol": {
+			"keccak256": "0x74104b743dfe8c91aaa32d0886e5dc7999edb4b5ec4845509d2e8e75b44ce467",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db77d928b7015435aacc99d5e6120d944e8f60979e7cd7f6b4d7a7e014a57f69",
+				"dweb:/ipfs/QmXbDLwGhzYNs4AGVcZrC3snxh1buKgkqJ8XtTAXrSXap3"
+			]
+		},
+		"src/utils/Structs.sol": {
+			"keccak256": "0x1d5387c3f4a055e4cc9f55adb350164a024eb3d0c836f5234b4ec3fa16c87591",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4fb725613472156a70a6d6be6610354239d9b2182ef8ad568769885c7dce49c1",
+				"dweb:/ipfs/QmTC2HtuQiPwapn2befVmafVXeuAzRPU9bimJqWwGw2Ni8"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,3 +1,15 @@
 [submodule "lib/forge-std"]
 	path = lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "lib/openzeppelin-contracts"]
+	path = lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "lib/filecoin-solidity"]
+	path = lib/filecoin-solidity
+	url = https://github.com/zondax/filecoin-solidity
+[submodule "lib/solidity-cborutils"]
+	path = lib/solidity-cborutils
+	url = https://github.com/smartcontractkit/solidity-cborutils
+[submodule "lib/solidity-bignumber"]
+	path = lib/solidity-bignumber
+	url = https://github.com/zondax/solidity-bignumber

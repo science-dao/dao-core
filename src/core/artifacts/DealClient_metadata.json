@@ -1,0 +1,642 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "errorCode",
+						"type": "int256"
+					}
+				],
+				"name": "ActorError",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ActorNotFound",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "FailToCallActor",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidAddress",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "",
+						"type": "uint64"
+					}
+				],
+				"name": "InvalidCodec",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidResponseLength",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidVerifiedDealParam",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "NotEnoughBalance",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "StoragePriceTooBig",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint64",
+						"name": "size",
+						"type": "uint64"
+					},
+					{
+						"indexed": true,
+						"internalType": "bool",
+						"name": "verified",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "DealProposalCreate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "version",
+						"type": "uint8"
+					}
+				],
+				"name": "Initialized",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "received",
+						"type": "string"
+					}
+				],
+				"name": "ReceivedDataCap",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "addBalance",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "method",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint64",
+						"name": "",
+						"type": "uint64"
+					},
+					{
+						"internalType": "bytes",
+						"name": "params",
+						"type": "bytes"
+					}
+				],
+				"name": "handle_filecoin_method",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint64",
+						"name": "",
+						"type": "uint64"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract Storage",
+						"name": "_s",
+						"type": "address"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "piece_cid",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint64",
+								"name": "piece_size",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bool",
+								"name": "verified_deal",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "label",
+								"type": "string"
+							},
+							{
+								"internalType": "int64",
+								"name": "start_epoch",
+								"type": "int64"
+							},
+							{
+								"internalType": "int64",
+								"name": "end_epoch",
+								"type": "int64"
+							},
+							{
+								"internalType": "uint256",
+								"name": "storage_price_per_epoch",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "provider_collateral",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "client_collateral",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "dataCid",
+								"type": "string"
+							},
+							{
+								"internalType": "uint64",
+								"name": "extra_params_version",
+								"type": "uint64"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "location_ref",
+										"type": "string"
+									},
+									{
+										"internalType": "uint64",
+										"name": "car_size",
+										"type": "uint64"
+									},
+									{
+										"internalType": "bool",
+										"name": "skip_ipni_announce",
+										"type": "bool"
+									},
+									{
+										"internalType": "bool",
+										"name": "remove_unsealed_copy",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct Structs.ExtraParamsV1",
+								"name": "extra_params",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct Structs.DealRequest",
+						"name": "deal",
+						"type": "tuple"
+					}
+				],
+				"name": "makeDealProposal",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s",
+				"outputs": [
+					{
+						"internalType": "contract Storage",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_dao",
+						"type": "address"
+					}
+				],
+				"name": "setDao",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "pieceCid",
+						"type": "bytes"
+					}
+				],
+				"name": "updateActivationStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "client",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"ActorError(int256)": [
+					{
+						"notice": "the called actor returned an error as part of its expected behaviour"
+					}
+				],
+				"ActorNotFound()": [
+					{
+						"notice": "the actor is not found"
+					}
+				],
+				"FailToCallActor()": [
+					{
+						"notice": "an error happened trying to call the actor"
+					}
+				],
+				"InvalidCodec(uint64)": [
+					{
+						"notice": "the codec received is not valid"
+					}
+				],
+				"InvalidResponseLength()": [
+					{
+						"notice": "the response received is not correct. In some case no response is expected and we received one, or a response was indeed expected and we received none."
+					}
+				],
+				"NotEnoughBalance(uint256,uint256)": [
+					{
+						"notice": "the smart contract has no enough balance to transfer"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/core/DealClient.sol": "DealClient"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": [
+			":@filecoin/=lib/filecoin-solidity/",
+			":@solidity-bignumber/=lib/solidity-bignumber/",
+			":@solidity-cborutils/=lib/solidity-cborutils/",
+			":ds-test/=lib/forge-std/lib/ds-test/src/",
+			":forge-std/=lib/forge-std/src/"
+		]
+	},
+	"sources": {
+		"@ensdomains/buffer/contracts/Buffer.sol": {
+			"keccak256": "0xd6dd3b0b327288f8e1b711a609f4040fea602e2ad4bba9febdf2f33b4e56eb0c",
+			"license": "BSD-2-Clause",
+			"urls": [
+				"bzz-raw://78a722152d40d778a97595e5224fac1d138f4e659dcb1a926148909ef4c4bdca",
+				"dweb:/ipfs/QmRxScF53x5ywsChLNpMUCdg2TSoCWTfo8G65Mo3sGY55b"
+			]
+		},
+		"@openzeppelin/contracts/proxy/utils/Initializable.sol": {
+			"keccak256": "0x3798da9e212cd00a7cda94ddb5a9721171a718e89c500d8901f810e0e37fa74e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a93f9c584e4b29dce1c7520b63d19f34c684f5ea972b5d04323a132059851004",
+				"dweb:/ipfs/QmajmiA7BsarS63FMoP5PcBS4mqVGoiJ7xZ3wJVonYNTHC"
+			]
+		},
+		"@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0xf96f969e24029d43d0df89e59d365f277021dac62b48e1c1e3ebe0acdd7f1ca1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ec772b45a624be516f1c81970caa8a2e144301e9d0921cbc1a2789fef39a1269",
+				"dweb:/ipfs/QmNyjwxCrGhQMyzLD93oUobJXVe9ceJvRvfXwbEtuxPiEj"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/MarketAPI.sol": {
+			"keccak256": "0xe2adcdda00cc16069016580c9ecfff6062f98315c40e4e584924d5808c4704fc",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://c9fbc15f3453849c20f9dd85e11d588bfd122a01396abb32715b8471154f51ca",
+				"dweb:/ipfs/Qmc3cJbt5JXyo75rvK2xCbCQA7EN8m9wXywH1C4GttR62T"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/cbor/AccountCbor.sol": {
+			"keccak256": "0xbc15538954ef494595fa3916532574ba00805ce09d8679d6bcebf59b5dc069cc",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://bc46b1dbb7760a7d9a100b0d44a95e4b0a3c68e7c22dda2c8ec9b0442080ed76",
+				"dweb:/ipfs/QmWjdmiD96UsdYNvsSv1W97JLvWE6NRnkZLBB5GUecWxkE"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/cbor/BigIntCbor.sol": {
+			"keccak256": "0xbe9eb7f33f943e12a2ca6d8a02178c30cef91f8c9db1c1b50f88a77e31784ac4",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://d4b8aa06f6f6a241531393d43e4439dcf264542312f03b3b1be00a6448d45d5e",
+				"dweb:/ipfs/QmVarAEVBJgLnGqMEZ6XDRokXKR8vWpS3R6fz7QNCMVPT2"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/cbor/BytesCbor.sol": {
+			"keccak256": "0x092be34452eead511a33e8d5c0a0878bf53ac5747ada8788099a81bdf888eccf",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://a8adec0719d5ae1d5252169a9987023fae1d07e50f40d1f91c04020d6e0cb783",
+				"dweb:/ipfs/QmWthjuXuaby8XYY5ujLdX9m1Npbd8EdNTjsi6fwqEXeZB"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/cbor/FilecoinCbor.sol": {
+			"keccak256": "0x9c73c2969df5325f1f86c401b05b8983e633e8bd21c1c72b2b9039a731174098",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://832c4992387994d42d5b8470cc67eddfe7220719970cc6fe0b17cb2ad0a88716",
+				"dweb:/ipfs/QmYW4WknHH4Rf6Wah3LKT1afcZuPkSBK4fegjpwdT5sRaL"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/cbor/MarketCbor.sol": {
+			"keccak256": "0x181e7688efec53b7b300ac9423ff0211dab43e1092340f4905f6528fbd30023a",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://351efb527d831ed1c719261b4a577c0bbd036db3c434d2fa2ac04a64b127f4d9",
+				"dweb:/ipfs/QmTP4ooWsvA7qy2QB4TUMmbKGZ9vvGrup2mmKsYBpNu3vF"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/types/AccountTypes.sol": {
+			"keccak256": "0x87555cec6962a4b6bd761a2390a24d66e01119d5b761048a27d1df0673a71263",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://f42937dc061ce4f2995ad2357a8ebcd030e5744b95665cf24313ed86e1767f4b",
+				"dweb:/ipfs/QmWbN2gozKsNXGYM4yMivTRaicPzjVALUHn2GDcRN7FiHE"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/types/CommonTypes.sol": {
+			"keccak256": "0x1819b8e82cf53f0fadc446d064a380979888b97a0004f1e70c9fa1a6f4f13ed9",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://f7346f62e3317f519791256e9ecd70c44b3ed48404d8a15aa28b3490b11adabb",
+				"dweb:/ipfs/QmNQLSdzyHLDN9a76XANJzkGVVdyYwYzZSRRiwv6CqwZRr"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/types/MarketTypes.sol": {
+			"keccak256": "0xcbffb585561b6057c72c1e1cfea6090d918341cc347e785a988ee9c3c70533be",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://82b52c00ee25cd810ac316b464924de45cfe1ea5834a8b2ad1deed6a3a76ad34",
+				"dweb:/ipfs/QmSofdrg4Xr1QUJ3ZAvuo3nb28fxWe56o4TondA1AaVGy9"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/utils/Actor.sol": {
+			"keccak256": "0xa4b9eb4d84491477a3c11336a431c4f3a0796977efb92779bd062f273824c67a",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://c9c42c1ca5c39551cc0c0032e3b3d602fcaed66bc67c21b2b46a770b6c7009aa",
+				"dweb:/ipfs/QmWiqHWieDPscnC21LjhgMrjE5UmzrRfEAVfXPNRTuZStw"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/utils/CborDecode.sol": {
+			"keccak256": "0x3babe3c71558c21f0bef9de09088c42b8b148d16d856f84a350b9c43b4da6018",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://1d6a4b4341714cbc99db90831f1a6fa05654c62702badec60701cff701355f9a",
+				"dweb:/ipfs/QmbQfXXmvhBhybcS1kd6B7UaXWTGg8R89xgzPycxeojWo6"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/utils/FilAddresses.sol": {
+			"keccak256": "0x93f1bd005e5bde5a4ab794c811d8852dbc968cc3c05f8eb1279e42165b1d6d42",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://ba53c4a65a0841db22393619350641f2353e05835ebc13942ec66afe082f20ed",
+				"dweb:/ipfs/QmevW4wrp1L6pqHbXnfAeTUZQcR7VFKMw618jFzWT7yQLu"
+			]
+		},
+		"lib/filecoin-solidity/contracts/v0.8/utils/Misc.sol": {
+			"keccak256": "0x97b02c3ab9cb11169b0b1a143b513017c6bf0f2cba2fc4f81a77345b5dfe96b4",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://1b116a3f7af53a2b35316405af74e296550dcfe04798b6c3954e2becda1027c1",
+				"dweb:/ipfs/QmPia4SFULn4EXcE8fiMBcKtf8TX7YfbJRZxywu31e6uQw"
+			]
+		},
+		"lib/solidity-bignumber/src/BigNumbers.sol": {
+			"keccak256": "0x581b5e7b7700a01eeec9ac00825ddb81753cfea182c9211e733eaf883584f7de",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4a29ebfc120c405ec42d185d3f2fa2551d69da962d7f00f822049d4fc1bef70",
+				"dweb:/ipfs/QmegF8HtDVFa9cFvnqt4hYLrTeaocvZHXHVeGXsrAKVVig"
+			]
+		},
+		"lib/solidity-cborutils/contracts/CBOR.sol": {
+			"keccak256": "0xe03d8889bf66e7a30e8010b022b6c86ad0f8c19764cc6c7f50b6bb4ad860cb9b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bbcfc16dda4f5785938acce3f6733a2a27fbcc7451da05e46e5493907c1bb790",
+				"dweb:/ipfs/QmTk1okPxoUykGuXPH3zD1LB57FwPuGbgYmViXXJtuYMUQ"
+			]
+		},
+		"solidity-cborutils/contracts/CBOR.sol": {
+			"keccak256": "0xe03d8889bf66e7a30e8010b022b6c86ad0f8c19764cc6c7f50b6bb4ad860cb9b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bbcfc16dda4f5785938acce3f6733a2a27fbcc7451da05e46e5493907c1bb790",
+				"dweb:/ipfs/QmTk1okPxoUykGuXPH3zD1LB57FwPuGbgYmViXXJtuYMUQ"
+			]
+		},
+		"src/core/DealClient.sol": {
+			"keccak256": "0x328d2571ce36843823a206bac57c4515e1aebe6fb9a985239d6d50c2939e7e36",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://081b38cc1a88e91be308a2da03eabded060f3c279451f56a49bc325205ba48e8",
+				"dweb:/ipfs/QmSbJE6wiArK2cZGxJS9sHvVFPbyuBUgtdy1kr2tR7XCGz"
+			]
+		},
+		"src/core/Storage.sol": {
+			"keccak256": "0xb20a505b5bc6aa7a59657bf770f2541d94ab0880f0875ce632fc752f3884e594",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db73670ca5dc956cbdaa0ac70c56fdd8e90174da29a955ab64219f7bdb6ffa65",
+				"dweb:/ipfs/Qmd1Hp3xVAo3ALxmgoj4qrjjVwbdqXfWRcfsz9aPhNutqT"
+			]
+		},
+		"src/interfaces/IUtils.sol": {
+			"keccak256": "0x2607994ba1074238e30c109a028a81d81772bb3edd2afb02de905c06d85a3129",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d0532ba3b77ba50593f0781a15a72166dad88e5d3951cc39062897b0e20752dc",
+				"dweb:/ipfs/QmZSdJYXV3tLoP2LAic1SxJuM4gMoFHofB66RFkKmoMDhU"
+			]
+		},
+		"src/utils/Constants.sol": {
+			"keccak256": "0xc470b6faf151bc960857a0a4dde2fc7c90e375e55253a24e167d304dea99e2ed",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cedbadefec8d60664ca9636c59acdf55041b1a20b7ddf5f4b280edab21da5f62",
+				"dweb:/ipfs/QmNwxBbuvjrtdTJ1iEY11ruHdLS6Ukd1G4mc1uQb9v4Zgr"
+			]
+		},
+		"src/utils/Enums.sol": {
+			"keccak256": "0x74104b743dfe8c91aaa32d0886e5dc7999edb4b5ec4845509d2e8e75b44ce467",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db77d928b7015435aacc99d5e6120d944e8f60979e7cd7f6b4d7a7e014a57f69",
+				"dweb:/ipfs/QmXbDLwGhzYNs4AGVcZrC3snxh1buKgkqJ8XtTAXrSXap3"
+			]
+		},
+		"src/utils/Errors.sol": {
+			"keccak256": "0xa0f0d58c422a6d8fccee63e74adfdb378de1e620f9fd275d1bd63446c4c3f357",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://74e96fa44b35bd3ea89b9a7da1165ed6b7bdc067a80e58e0c3e81d7f4db056f7",
+				"dweb:/ipfs/QmZosPj42QnTrwUFRpfC4fd7wmfFPxKu8HGU2RvPUMEowt"
+			]
+		},
+		"src/utils/Structs.sol": {
+			"keccak256": "0x1d5387c3f4a055e4cc9f55adb350164a024eb3d0c836f5234b4ec3fa16c87591",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4fb725613472156a70a6d6be6610354239d9b2182ef8ad568769885c7dce49c1",
+				"dweb:/ipfs/QmTC2HtuQiPwapn2befVmafVXeuAzRPU9bimJqWwGw2Ni8"
+			]
+		},
+		"src/utils/Utils.sol": {
+			"keccak256": "0xab5cdec4be3e9b6577ee2c0080d04d83fe277605738b5175197af9881a1b751b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://924c9f8005a2533ab71b1fa163564ac85637cf8a9ce92284e46fc307044ed86c",
+				"dweb:/ipfs/Qmb7tZp82114TpgfHdTBQkbYTJHqEX2MNjDeffhvpQSz8u"
+			]
+		}
+	},
+	"version": 1
+}

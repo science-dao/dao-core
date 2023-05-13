@@ -1,0 +1,202 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"serializeDealProposal((bytes,uint64,bool,string,int64,int64,uint256,uint256,uint256,string,uint64,(string,uint64,bool,bool)))": "08485a83",
+			"serializeExtraParamsV1((string,uint64,bool,bool))": "d96a5d11"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "bytes",
+							"name": "piece_cid",
+							"type": "bytes"
+						},
+						{
+							"internalType": "uint64",
+							"name": "piece_size",
+							"type": "uint64"
+						},
+						{
+							"internalType": "bool",
+							"name": "verified_deal",
+							"type": "bool"
+						},
+						{
+							"internalType": "string",
+							"name": "label",
+							"type": "string"
+						},
+						{
+							"internalType": "int64",
+							"name": "start_epoch",
+							"type": "int64"
+						},
+						{
+							"internalType": "int64",
+							"name": "end_epoch",
+							"type": "int64"
+						},
+						{
+							"internalType": "uint256",
+							"name": "storage_price_per_epoch",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "provider_collateral",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "client_collateral",
+							"type": "uint256"
+						},
+						{
+							"internalType": "string",
+							"name": "dataCid",
+							"type": "string"
+						},
+						{
+							"internalType": "uint64",
+							"name": "extra_params_version",
+							"type": "uint64"
+						},
+						{
+							"components": [
+								{
+									"internalType": "string",
+									"name": "location_ref",
+									"type": "string"
+								},
+								{
+									"internalType": "uint64",
+									"name": "car_size",
+									"type": "uint64"
+								},
+								{
+									"internalType": "bool",
+									"name": "skip_ipni_announce",
+									"type": "bool"
+								},
+								{
+									"internalType": "bool",
+									"name": "remove_unsealed_copy",
+									"type": "bool"
+								}
+							],
+							"internalType": "struct Structs.ExtraParamsV1",
+							"name": "extra_params",
+							"type": "tuple"
+						}
+					],
+					"internalType": "struct Structs.DealRequest",
+					"name": "deal",
+					"type": "tuple"
+				}
+			],
+			"name": "serializeDealProposal",
+			"outputs": [
+				{
+					"internalType": "bytes",
+					"name": "",
+					"type": "bytes"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "string",
+							"name": "location_ref",
+							"type": "string"
+						},
+						{
+							"internalType": "uint64",
+							"name": "car_size",
+							"type": "uint64"
+						},
+						{
+							"internalType": "bool",
+							"name": "skip_ipni_announce",
+							"type": "bool"
+						},
+						{
+							"internalType": "bool",
+							"name": "remove_unsealed_copy",
+							"type": "bool"
+						}
+					],
+					"internalType": "struct Structs.ExtraParamsV1",
+					"name": "params",
+					"type": "tuple"
+				}
+			],
+			"name": "serializeExtraParamsV1",
+			"outputs": [
+				{
+					"internalType": "bytes",
+					"name": "",
+					"type": "bytes"
+				}
+			],
+			"stateMutability": "pure",
+			"type": "function"
+		}
+	]
+}

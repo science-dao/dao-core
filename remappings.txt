@@ -1,0 +1,5 @@
+@openzeppelin/=lib/openzeppelin-contracts/
+forge-std/=lib/forge-std/%  
+@filecoin/=lib/filecoin-solidity/
+@solidity-cborutils/=lib/solidity-cborutils/
+@solidity-bignumber/=lib/solidity-bignumber/
